@@ -1,0 +1,402 @@
+<html>
+	<head>
+		<title>barGraphTest</title>
+		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<style>
+		@keyframes moveUp {
+    		from {bottom: 400px;}
+    		to {background-color: 420px;}
+		}
+		body {
+			background-color: #34495e;
+		}
+		#barOne {
+			height: 700px;
+			width: 80%;
+			background-color: #c0392b;
+			position: absolute;
+			bottom: 0%;
+			left: 10%;
+			z-index: 1500;
+			border-radius: 5px 50px 0px 0px;
+		}
+		#barOne:hover {
+			background-color: #e74c3c;
+			z-index: 1000;
+		}
+		#barTwo {
+			height: 700px;
+			width: 40%;
+			background-color: #2980b9;
+			position: absolute;
+			bottom: 0%;
+			left: 10%;
+			z-index: 900;
+			border-radius: 5px 50px 0px 0px;
+		}
+		#barTwo:hover {
+			background-color: #3498db;
+			/*height: 100px;	*/
+		}
+		#barThree {
+			height: 700px;
+			width: 40%;
+			background-color: #8e44ad;
+			position: absolute;
+			bottom: 0%;
+			right: 10%;
+			z-index: 900;
+			border-radius: 5px 50px 0px 0px;
+		}
+		#barThree:hover {
+			background-color: #9b59b6;
+			z-index: 1000;
+		}
+		/*#barOne:hover + .speech{
+			visibility: visible;
+		}*/
+		/*.speech {
+			height: 100px;
+			background-color: white;
+			position: absolute;
+			bottom: 720px;
+			border: 2px solid black;
+			border-radius: 5px 50px 0px 0px;
+			/*visibility: hidden;
+			text-align:center;
+			vertical-align: middle;
+			line-height: 100px;
+		}
+		#bubOne {
+			left: 40%;
+			width: 400px;
+		}*/
+		.barTitle {
+			text-align: center;
+			font-family: 'Lato', sans-serif;
+		}
+		.barCost {
+			text-align: center;
+		}
+		.bar8 {
+			text-align: center;
+			width: 5%;
+			height: 700px;
+			z-index: 10;
+			bottom: 0%;
+			position: absolute;
+			border-radius: 5px 20px 0px 0px;
+			font-size: 1em;
+		}
+		.bar6 {
+			text-align: center;
+			width: 6.666666%;
+			height: 700px;
+			z-index: 10;
+			bottom: 0%;
+			position: absolute;
+			border-radius: 5px 20px 0px 0px;
+			font-size: 1em;
+		}
+		#bar18 {
+			left: 10%;;
+			background-color: #16a085;
+		}
+		#bar28 {
+			left: 15%;
+			background-color: #f1c40f;
+		}
+		#bar38 {
+			left: 20%;
+			background-color: #16a085;
+		}
+		#bar48 {
+			left: 25%;
+			background-color: #f1c40f;
+		}
+		#bar58 {
+			left: 30%;
+			background-color: #16a085;
+		}
+		#bar68 {
+			left: 35%;
+			background-color: #f1c40f;
+		}
+		#bar78 {
+			left: 40%;
+			background-color: #16a085;
+		}
+		#bar88 {
+			left: 45%;
+			background-color: #f1c40f;
+		}
+		#bar16 {
+			left: 50%;
+			background-color: hotpink;
+		}
+		#bar26 {
+			left: 56.666666666%;
+			background-color: saddlebrown;
+		}
+		#bar36 {
+			left: 63.33333333%;
+			background-color: hotpink;
+		}
+		#bar46 {
+			left: 69.99999999%;
+			background-color: saddlebrown;
+		}
+		#bar56 {
+			left: 76.6666666%;
+			background-color: hotpink;
+		}
+		#bar66 {
+			left: 83.333333%;
+			background-color: saddlebrown;
+		}
+	</style>
+	</head>
+	
+	
+	<body>
+		
+		<br>
+		<h1 style="font-family: 'Lato', sans-serif; font-size: 6em; color: white; text-align: center;">Discover the New Brunswick City Budget</h1>
+		
+		<div id="graph">
+			
+			<div id="barOne">
+				<p class="barTitle" style="font-size: 2em;">Total General Appropriations for 2015 Municipal Budget Statement</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 8em;">$84,056,327.91</h1>
+			</div>
+		
+			<div class="bar8" id="bar18">
+				<p class="barTitle">Total Interlocal Municipal Service Agreements</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 1em;">$313,0174</h1>
+			</div>
+			<div class="bar8" id="bar28">
+				<p class="barTitle">Total Public and Private Programs Offset by Revenues</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 1em;">$277,786.06</h1>
+			</div>
+			<div class="bar8" id="bar38">
+				<p class="barTitle">Total Capital Improvements Excluded from "CAPS"</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 1em;">$250,000</h1>
+			</div>
+			<div class="bar8" id="bar48">
+				<p class="barTitle">Total Municipal Debt Service - Excluded from "CAPS"</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 1em;">$5,346,023.20</h1>
+			</div>
+			<div class="bar8" id="bar58">
+				<p class="barTitle">Transferred to Board of Educated for Use of Local Schools</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 1em;">$760,162</h1>
+			</div>
+			<div class="bar8" id="bar68">
+				<p class="barTitle">Total General Appropriations for Municipal Purposes Excluded from "CAPS"</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 1em;">$11,177,440.58</h1>
+			</div>
+			<div class="bar8" id="bar78">
+				<p class="barTitle">District School Debt Service</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 1em;">$2,733,837.50</h1>
+			</div>
+			<div class="bar8" id="bar88">
+				<p class="barTitle">Total Other Operations - Excluded from "CAPS"</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 1em;">$1,413,295.32</h1>
+			</div>
+			
+			<div class="bar6" id="bar16">
+				<p class="barTitle">Dedicated Uniform Construction Code Fees Offset With Appropriations</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 1em;">$1,020,000</h1>
+			</div>
+			<div class="bar6" id="bar26">
+				<p class="barTitle">Shared Service Agreements Offset With Appropriations</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 1em;">$3,130,174.00</h1>
+			</div>
+			<div class="bar6" id="bar36">
+				<p class="barTitle">Special Items of General Revenue Anticipated with Prior Written</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 1em;">$4,646,032.27</h1>
+			</div>
+			<div class="bar6" id="bar46">
+				<p class="barTitle">State Aid Without Offsetting Appropriations</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 1em;">$15,472,969.22</h1>
+			</div>
+			<div class="bar6" id="bar56">
+				<p class="barTitle">Local Revenues</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 1em;">$ 26,334,793.97</h1>
+			</div>
+			<div class="bar6" id="bar66">
+				<p class="barTitle">Total Sewer Utility Appropriations</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1 class="barCost"  style="font-size: 1em;">$12,849,395.60</h1>
+			</div>
+			
+		</div>
+		
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script>
+			
+			var bigBarDown = false;
+			var bar2Down = false;
+			var bar3Down = false;
+			var twoBacksExist = false;
+			var the8exist = false;
+			
+			function barTwoClick(){
+					
+		 		
+				if (bar2Down){
+					$('#barTwo').animate({
+				        height: '+=550px'
+				    }, 1000);
+					bar2Down = false;
+				}
+				else {
+					$('#barTwo').animate({
+				        height: '-=550px'
+				    }, 1000);
+					bar2Down = true;
+					
+					
+					if (the8exist){
+						
+						
+					}else {
+						// $('#graph').append('<div class="bar8" id="bar18"></div><div class="bar8" id="bar28"></div><div class="bar8" id="bar38"></div><div class="bar8" id="bar48"></div><div class="bar8" id="bar58"></div><div class="bar8" id="bar68"></div><div class="bar8" id="bar78"></div><div class="bar8" id="bar88"></div>');
+						// the8exist = true;
+					}
+					
+				}
+		
+			}
+			
+			function barThreeClick(){
+					
+		 		
+				if (bar3Down){
+					$('#barThree').animate({
+				        height: '+=500px'
+				    }, 1000);
+					bar3Down = false;
+				}
+				else {
+					$('#barThree').animate({
+				        height: '-=500px'
+				    }, 1000);
+					bar3Down = true;
+				}
+		
+			}
+			
+			
+			
+			$(document).ready(function(){
+				
+				$('.speech').fadeOut( 0 );
+			});
+			
+			$('#barOne').hover(function() {
+
+  				
+  				$('.speech').fadeIn( 400 );
+				//$('.speech').css('visibility', 'visible');
+			});
+			
+			$('#barOne').mouseleave(function() {
+  				
+				
+				  
+				  $('.speech').fadeOut( 600 );
+				//$('.speech').css('visibility', 'hidden');
+			});
+			
+			$('#barOne').click(function(){
+		// 		
+		//alert();
+		if (bigBarDown){
+			$(this).animate({
+        height: '+=625px'
+    }, 1000);
+	bigBarDown = false;
+		}
+		else {
+			$(this).animate({
+        height: '-=625px'
+    }, 1000);
+	bigBarDown = true;
+		}
+			if (twoBacksExist){
+				
+			} else {
+						$("#graph").append('<div id="barTwo" onclick="barTwoClick()"><p class="barTitle" style="font-size: 2em;">Excluded From "CAPS"</p><br><br><br><br><h1 class="barCost" style="font-size: 4em;">$14,278,103.87</h1></div><div id="barThree" onclick="barThreeClick()"><p class="barTitle" style="font-size: 2em;">Total General Appropriations for Municipal Purposes within "CAPS"</p><br><br><br><br><h1 class="barCost" style="font-size: 4em;">$69,778,224.04</h1></div>');
+						twoBacksExist = true;
+			}
+		
+			});
+			
+
+			
+	
+			
+		</script>
+		
+	</body>
+</html>
